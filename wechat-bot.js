@@ -68,9 +68,9 @@ async function onMessage(msg) {
   const contact = msg.talker();
   const contactName = contact.name();
 
-  if (contactName === "无线翡翠台" && msg.text()) {
+  if (contactName === "叶泽曦" && msg.text()) {
     try {
-      console.log(`收到来自无线翡翠台的消息: ${msg.text()}`);
+      console.log(`收到来自叶泽曦的消息: ${msg.text()}`);
       
       let content = msg.text();
       
@@ -90,10 +90,10 @@ async function onMessage(msg) {
       }
       
       const reply = await chatWithLLM(content);
-      console.log(`LLM回复无线翡翠台: ${reply}`);
+      console.log(`LLM回复叶泽曦: ${reply}`);
       await msg.say(reply);
     } catch (error) {
-      console.error('处理无线翡翠台的消息时出错:', error);
+      console.error('处理叶泽曦的消息时出错:', error);
       await msg.say('抱歉,处理您的消息时出现了错误。');
     }
   } else {
